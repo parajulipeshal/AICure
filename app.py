@@ -49,11 +49,15 @@ page_bg_img = '''
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+# Display the logo at the top of the sidebar
+st.sidebar.image("logo.png", use_column_width=True)
+
 # Sidebar navigation
 st.sidebar.title(f"{APP_NAME} Navigation")
 option = st.sidebar.radio("Choose an option", ["Home", "Diagnose", "About"])
 
 if option == "Home":
+    st.image("logo.png", width=200)  # Display the logo on the homepage
     st.title(f"Welcome to {APP_NAME}")
     
     st.subheader(f"What is {APP_NAME}?")
@@ -101,3 +105,4 @@ elif option == "About":
     st.write("[LinkedIn](https://www.linkedin.com/in/peshal-parajuli-7b401926b/)")
     st.write("[Facebook](https://www.facebook.com/krishalparajuli18)")
     st.write("[GitHub](https://www.github.com/parajulipeshal)")
+
